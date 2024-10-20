@@ -1,0 +1,94 @@
+/* Styling dasar */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #030303;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Kue ulang tahun */
+.cake {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+/* Lapisan kue */
+.layer {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+}
+
+/* Warna lapisan kue */
+.layer1 { background-color: #ff8c94; top: 0; }
+.layer2 { background-color: #ffaaa5; top: 80px; }
+.layer3 { background-color: #ffd3b6; top: 160px; }
+
+/* Lilin */
+.candles {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+}
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Api lilin */
+.flame {
+    width: 10px;
+    height: 20px;
+    background-color: gold;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    animation: flicker 0.1s infinite alternate;
+}
+
+/* Animasi berkedip */
+@keyframes flicker {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Piring */
+.plate {
+    width: 240px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -0px;
+    left: -20px;
+}
+
+/* Teks ucapan */
+.greeting {
+    font-size: 2rem;
+    color: #ffffff;
+    animation: pop-in 1s ease-in-out;
+}
+
+/* Animasi teks */
+@keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
